@@ -4,55 +4,55 @@ const galleryImages = [
   {
     id: 1,
     title: "Opening Ceremony 2024",
-    src: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/high.jpg",
     category: "ceremony"
   },
   {
     id: 2,
     title: "Committee Session: UNSC",
-    src: "https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/high2.jpg",
     category: "committee"
   },
   {
     id: 3,
     title: "Delegate Networking",
-    src: "https://images.pexels.com/photos/1181622/pexels-photo-1181622.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/high3.jpg",
     category: "social"
   },
   {
     id: 4,
     title: "Panel Discussion",
-    src: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/high4.jpg",
     category: "ceremony"
   },
   {
     id: 5,
     title: "Award Ceremony 2024",
-    src: "https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/ctad.jpg",
     category: "ceremony"
   },
   {
     id: 6,
     title: "Committee Session: WHO",
-    src: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/india.jpg",
     category: "committee"
   },
   {
     id: 7,
     title: "Cultural Night",
-    src: "https://images.pexels.com/photos/2774556/pexels-photo-2774556.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/high5.jpg",
     category: "social"
   },
   {
     id: 8,
     title: "Guest Lecture",
-    src: "https://images.pexels.com/photos/5427867/pexels-photo-5427867.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/plag.jpg",
     category: "ceremony"
   },
   {
     id: 9,
     title: "Committee Session: UNHRC",
-    src: "https://images.pexels.com/photos/3182750/pexels-photo-3182750.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+    src: "src/public/unsc.jpg",
     category: "committee"
   }
 ];
@@ -92,8 +92,8 @@ const Gallery = () => {
     <section id="gallery" className="py-20 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Photo Gallery</h2>
-          <div className="w-20 h-1 bg-yellow-600 mx-auto mb-6"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">Photo Gallery</h2>
+          <div className="w-20 h-1 bg-red-400 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
             Explore moments from our previous conferences. These photos capture the spirit of debate, diplomacy, and international cooperation that defines the JGU MUN experience.
           </p>
@@ -104,7 +104,7 @@ const Gallery = () => {
           <button
             onClick={() => setActiveFilter('all')}
             className={`px-4 py-2 m-1 rounded-md transition-colors duration-300 ${
-              activeFilter === 'all' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              activeFilter === 'all' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
             All Photos
@@ -112,7 +112,7 @@ const Gallery = () => {
           <button
             onClick={() => setActiveFilter('ceremony')}
             className={`px-4 py-2 m-1 rounded-md transition-colors duration-300 ${
-              activeFilter === 'ceremony' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              activeFilter === 'ceremony' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
             Ceremonies
@@ -120,7 +120,7 @@ const Gallery = () => {
           <button
             onClick={() => setActiveFilter('committee')}
             className={`px-4 py-2 m-1 rounded-md transition-colors duration-300 ${
-              activeFilter === 'committee' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              activeFilter === 'committee' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
             Committee Sessions
@@ -128,7 +128,7 @@ const Gallery = () => {
           <button
             onClick={() => setActiveFilter('social')}
             className={`px-4 py-2 m-1 rounded-md transition-colors duration-300 ${
-              activeFilter === 'social' ? 'bg-blue-900 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
+              activeFilter === 'social' ? 'bg-red-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300'
             }`}
           >
             Social Events

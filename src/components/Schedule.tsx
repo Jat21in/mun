@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const scheduleData = [
   {
-    day: "Day 1 - August 15, 2025",
+    day: "Day 1 - August 8, 2025",
     events: [
       { time: "08:00 - 09:30", title: "Registration & Check-in", description: "Delegates arrive and complete registration at the conference venue" },
       { time: "10:00 - 11:30", title: "Opening Ceremony", description: "Official welcome by the Secretary-General and keynote address by distinguished guests" },
@@ -13,7 +13,7 @@ const scheduleData = [
     ]
   },
   {
-    day: "Day 2 - August 16, 2025",
+    day: "Day 2 - August 9, 2025",
     events: [
       { time: "09:00 - 12:30", title: "Committee Session III", description: "Formal debate continues with working paper presentations" },
       { time: "12:30 - 13:30", title: "Lunch Break", description: "Lunch provided for all delegates" },
@@ -23,7 +23,7 @@ const scheduleData = [
     ]
   },
   {
-    day: "Day 3 - August 17, 2025",
+    day: "Day 3 - August 10, 2025",
     events: [
       { time: "09:00 - 12:00", title: "Committee Session V", description: "Final debate on draft resolutions and amendments" },
       { time: "12:00 - 13:00", title: "Lunch Break", description: "Final lunch for delegates" },
@@ -41,8 +41,8 @@ const Schedule = () => {
     <section id="schedule" className="py-20 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Conference Schedule</h2>
-          <div className="w-20 h-1 bg-yellow-600 mx-auto mb-6"></div>
+          <h2 className="text-3xl md:text-4xl font-bold text-red-600 mb-4">Conference Schedule</h2>
+          <div className="w-20 h-1 bg-red-600 mx-auto mb-6"></div>
           <p className="text-gray-600 max-w-3xl mx-auto">
             The three-day conference is packed with committee sessions, networking events, and engaging activities. Below is the detailed schedule for each day.
           </p>
@@ -55,8 +55,8 @@ const Schedule = () => {
               key={index}
               className={`px-6 py-3 font-medium rounded-md mx-2 mb-2 transition-colors duration-300 ${
                 activeDay === index 
-                  ? 'bg-blue-900 text-white' 
-                  : 'bg-gray-100 text-blue-900 hover:bg-gray-200'
+                  ? 'bg-red-600 text-white' 
+                  : 'bg-gray-100 text-red-800 hover:bg-gray-200'
               }`}
               onClick={() => setActiveDay(index)}
             >
@@ -66,7 +66,7 @@ const Schedule = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <h3 className="text-2xl font-bold text-blue-900 mb-6 text-center">
+          <h3 className="text-2xl font-bold text-red-600 mb-6 text-center">
             {scheduleData[activeDay].day}
           </h3>
           
@@ -77,12 +77,12 @@ const Schedule = () => {
             {scheduleData[activeDay].events.map((event, index) => (
               <div key={index} className="relative mb-8 ml-8">
                 {/* Timeline dot */}
-                <div className="absolute -left-10 top-5 w-4 h-4 rounded-full bg-yellow-600"></div>
+                <div className="absolute -left-10 top-5 w-4 h-4 rounded-full bg-red-600"></div>
                 
                 <div className="bg-gray-50 rounded-lg shadow-sm p-6 transition-all duration-300 hover:shadow-md">
                   <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-2">
-                    <h4 className="text-xl font-bold text-blue-900">{event.title}</h4>
-                    <span className="text-sm font-medium text-yellow-600 bg-yellow-100 px-3 py-1 rounded-full mt-2 sm:mt-0">
+                    <h4 className="text-xl font-bold text-red-600">{event.title}</h4>
+                    <span className="text-sm font-medium text-red-600 bg-red-100 px-3 py-1 rounded-full mt-2 sm:mt-0">
                       {event.time}
                     </span>
                   </div>
@@ -96,7 +96,7 @@ const Schedule = () => {
         <div className="text-center mt-12">
           <a
             href="#"
-            className="inline-block px-6 py-3 bg-blue-900 hover:bg-blue-800 text-white font-medium rounded-md transition-colors duration-300"
+            className="inline-block px-6 py-3 bg-red-600 hover:bg-red-700 text-white font-medium rounded-md transition-colors duration-300"
           >
             Download Full Schedule
           </a>
